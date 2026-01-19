@@ -1,63 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Personal Website</title>
-    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Raleway:100,500,600,800" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexander P. Clark | Cardiac Systems Biology</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="banner">
-        <img class="banner-img" src="https://i.ibb.co/GVshrnr/white-laptop-computer-on-white-table-3787306.jpg" alt="white-laptop-computer-on-white-table-3787306">    
-        <div class="banner-text">
-            <h1 class="name">Alex Clark</h1>
-            <h2 class="profession">PhD Student</h2>
-        </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">Alexander P. Clark, Ph.D.</div>
+      <nav class="nav-links">
+        <a href="index.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching-service.html">Teaching &amp; Service</a>
+      </nav>
     </div>
-  
-    <ul class="outer-ul">
-        <li class="outer-li">
-            <h3 class="section-header">About Me</h3>
-            <p class="sub-section">
-                I'm Alex Clark and I am a second-year PhD student in Biomedical Engineering. I am pursuing a career in computational biology, with the ultimate goal of improving health access and outcomes for all people.
-            </p>
-        </li>
+  </header>
 
-        <li class="outer-li">
-            <h3 class="section-header">My Background</h3>
-            <p class="sub-section">
-                Prior to attending graduate school, I was a professional science and computer science teacher in New York City....
-            </p>
-        </li>
-
-        <li class="outer-li">
-            <h3 class="section-header">My Projects OR My Writing OR My Social Presence...</h3>
-            <p class="sub-section">
-                I learned to program six years ago, and have developed numerous projects over that time. Below I have listed a few of them 
-            </p>
-            <ul class="inner-ul">
-                <li class="inner-li"><a href="https://github.com/apclarkva/Fractional-Shortening-Measurement-Tool" target="_blank">A program to predict heart abnormalities from ultrasound images</a></li>  
-                <li class="inner-li" target="_blank"><a href="https://github.com/apclarkva/Semi-automated-detection-of-RHD">A program to predict rheumatic heart disease from hand-held ultrasounds</a></li>  
-                <li class="inner-li"><a href="https://github.com/apclarkva/computational-methods" target="_blank">A package of custom computational methods</a></li>  
-            </ul>
-        </li>
-
-        <li class="outer-li">
-            <h3 class="section-header">My Interests</h3>
-            <p class="sub-section">I love music, cooking, the great outdoors, long walks on the beach, colorful suits, sandwiches, etc etc. Look at me play Music!!!!!!</p>
-        </li>
-    
-    </ul>
-    
-    <footer>
-        <div class="footer-text">
-            <h2>Contact me</h2>
-            <ul class="contact-list">
-                <li>my.email@gmail.com</li>
-                <li>@myTwitterHandle</li>
-                <li>@myInstagramHandle</li>
-            </ul>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="profile-placeholder" role="img" aria-label="Portrait of Alexander P. Clark">APC</div>
         </div>
-        
-    </footer>
+        <div class="hero-card">
+          <h1 class="hero-title">Postdoctoral researcher in cardiac systems biology.</h1>
+          <p class="hero-subtitle">
+            I study gene regulatory networks and electrophysiology to understand how cardiomyocytes develop, adapt, and malfunction. I am preparing for a faculty search in 2026 and welcome opportunities to collaborate.
+          </p>
+          <div class="button-row">
+            <a class="btn primary" href="publications.html">View publications</a>
+            <a class="btn" href="research.html">Research focus</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column">
+        <div>
+          <h2 class="section-header">About me</h2>
+          <p class="section-subtitle">
+            I am a postdoctoral researcher in the University of Virginia Department of Biomedical Engineering with Dr. Jeffrey Saucerman. My work integrates experimental measurements with computational models to decode how transcriptional programs shape cardiac development and disease.
+          </p>
+          <p>
+            Previously, I earned my Ph.D. in Biomedical Engineering at Cornell University with Dr. David Christini, where I developed single-cell phenotyping approaches to explain heterogeneity in stem cell-derived cardiomyocytes and uncover mechanisms of arrhythmia.
+          </p>
+        </div>
+        <div class="callout">
+          <h3>At a glance</h3>
+          <ul class="list-reset highlight-list">
+            <li><strong>Position:</strong> Postdoctoral Researcher, University of Virginia</li>
+            <li><strong>Training:</strong> Ph.D., Biomedical Engineering (Cornell University)</li>
+            <li><strong>Fellowships:</strong> AHA Postdoctoral Fellow, UVA Cardiovascular T32</li>
+            <li><strong>Research themes:</strong> Gene regulatory networks, cardiac development, electrophysiology, computational modeling</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-header">Recent highlights</h2>
+        <p class="section-subtitle">Selected milestones from my current and recent work.</p>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Gene regulatory networks in development</h3>
+            <p>
+              Modeling segment-specific regulatory circuits to explain how cardiomyocytes transition between chamber identities during heart tube morphogenesis.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Single-cell electrophysiology</h3>
+            <p>
+              Built computational pipelines that pair automated voltage clamp with mechanistic models to understand drug-induced arrhythmia risk.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Modeling platforms</h3>
+            <p>
+              Developed logic-based network tools and open workflows to make systems biology modeling accessible to experimental collaborators.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <p>Email: apc5un@virginia.edu</p>
+        <p>Location: Charlottesville, VA</p>
+      </div>
+      <div>
+        <h3>Quick links</h3>
+        <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/" target="_blank" rel="noreferrer">NCBI bibliography</a></p>
+        <p><a href="https://github.com/apclarkva" target="_blank" rel="noreferrer">GitHub</a></p>
+      </div>
+      <div>
+        <h3>Looking ahead</h3>
+        <p>Preparing for a faculty search in 2026. Please reach out to discuss collaborations, seminars, or opportunities.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
