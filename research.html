@@ -3,108 +3,437 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research Focus | Alexander P. Clark</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Research Program | Alexander P. Clark</title>
+  <meta name="description" content="Research program of Alexander P. Clark: gene regulatory network control of cardiomyocyte electrical identity, and single-cardiomyocyte determinants of electrical vulnerability.">
+  <meta name="theme-color" content="#0d2137">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">Alexander P. Clark, Ph.D.</div>
-      <nav class="nav-links">
+      <a class="logo" href="index.html">Alexander P. Clark<span>, Ph.D.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav-links" id="nav">
         <a href="index.html">About</a>
-        <a href="research.html">Research</a>
+        <a href="research.html" aria-current="page">Research</a>
         <a href="publications.html">Publications</a>
-        <a href="teaching-service.html">Teaching &amp; Service</a>
+        <a href="cv.html">CV</a>
+        <a href="teaching-service.html">Teaching &amp; Mentoring</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-grid">
+    <section class="hero page-hero">
+      <div class="container">
+        <span class="eyebrow">Research program</span>
+        <h1>Systems Biology Lab for Cardiac Development &amp; Electrophysiology</h1>
+        <p class="lede">How gene regulatory networks build electrical identity into cardiomyocytes, and how that program is remodeled in disease.</p>
+        <ul class="chips dark" style="margin-top:24px">
+          <li><a href="#vision" style="color:inherit;text-decoration:none">Vision</a></li>
+          <li><a href="#foundation" style="color:inherit;text-decoration:none">Foundation</a></li>
+          <li><a href="#platforms" style="color:inherit;text-decoration:none">Platforms</a></li>
+          <li><a href="#area-1" style="color:inherit;text-decoration:none">Area 1</a></li>
+          <li><a href="#area-2" style="color:inherit;text-decoration:none">Area 2</a></li>
+          <li><a href="#outlook" style="color:inherit;text-decoration:none">Funding &amp; outlook</a></li>
+          <li><a href="#collaborators" style="color:inherit;text-decoration:none">Collaborators</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Vision -->
+    <section class="section" id="vision">
+      <div class="container split">
         <div>
-          <h1 class="hero-title">Research focus</h1>
-          <p class="hero-subtitle">
-            I build computational models that connect molecular networks with cardiomyocyte function. My group uses gene regulatory network inference, logic-based modeling, and electrophysiology to understand how cardiac identity is established and how arrhythmias emerge.
+          <span class="eyebrow teal">Vision</span>
+          <h2>From gene-by-gene to network-level</h2>
+          <p>
+            Arrhythmias come from the interaction between tissue structure and the electrical identity of individual cardiomyocytes. Gene regulatory networks (GRNs) build that identity by setting the expression of ion channels, calcium-handling proteins, and connexins.
           </p>
-          <div class="button-row">
-            <a class="btn primary" href="publications.html">Selected publications</a>
-            <a class="btn" href="index.html">About me</a>
+          <p>
+            Cardiomyocyte transcriptional regulators can remodel whole modules of the electrical program, and the effect of any perturbation depends on developmental stage and cell state. Even so, these links have mostly been worked out one gene at a time, without asking where each gene sits in the larger network.
+          </p>
+          <p>
+            <strong>My lab will work at the network level.</strong> The long-term objective is to understand how gene regulatory networks establish and maintain cardiomyocyte electrophysiology, and how changes to these networks cause pathogenic remodeling.
+          </p>
+        </div>
+        <div class="card">
+          <h3>One loop for both areas</h3>
+          <p class="muted small">Computational and experimental models are matched. Model perturbations (DynaGRIN), single-cell phenotyping (CARBONITE), and genetic or drug perturbations feed each other.</p>
+          <div class="loop" style="grid-template-columns:1fr">
+            <div class="step"><b>MODEL</b><span>DynaGRIN <em>in silico</em> perturbation of inferred GRNs</span></div>
+            <div class="arr" style="transform:rotate(90deg);justify-self:center">→</div>
+            <div class="step"><b>PREDICT</b><span>Mechanistic action potential &amp; calcium models</span></div>
+            <div class="arr" style="transform:rotate(90deg);justify-self:center">→</div>
+            <div class="step"><b>TEST</b><span>Longitudinal live imaging + CARBONITE in iPSC-CMs</span></div>
+          </div>
+          <p class="loop-note">↺ Data refine the network</p>
+          <p class="small muted" style="margin:0">Area 1 turns model predictions into experiments. Area 2 uses single-cell measurements to constrain the models.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Foundation -->
+    <section class="section alt" id="foundation">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow teal">Foundation</span>
+          <h2>Eight years of building the tools to ask this question</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <div class="area-tag">Ph.D. · Cornell · David Christini</div>
+            <h3>Single-cell measurement recovers what population averages hide</h3>
+            <p>
+              I combined mathematical modeling with patch-clamp experiments in human iPSC-derived cardiomyocytes (iPSC-CMs) to work out how ionic currents shape electrophysiology. I built an <a href="publications.html#p11">in silico–in vitro pipeline</a> that uses genetic algorithms to design voltage-clamp protocols that show which ion channels a drug blocks. With it, I found that quinine blocks the funny current, which had not been recognized before.
+            </p>
+            <p>
+              I also showed that these protocols explain the action potential heterogeneity that distorts recordings in the literature (<a href="publications.html#p10">Europace 2023</a>, <a href="publications.html#p4">Adv Sci 2025</a>) and limits iPSC-CMs as a model system more generally (<a href="publications.html#p7">AJP-Heart 2024</a>, <a href="publications.html#p8">J Physiol 2024</a>).
+            </p>
+            <p class="small muted">Six first-author papers · NIH F31 predoctoral fellowship</p>
+          </article>
+          <article class="card">
+            <div class="area-tag">Postdoc · UVA · Jeffrey Saucerman</div>
+            <h3>The networks that build cardiomyocyte identity</h3>
+            <p>
+              I developed complementary experimental (CARBONITE) and computational (DynaGRIN) approaches to perturb these networks and measure the consequences. Using DynaGRIN to nominate regulators and CARBONITE to test them, I found that <strong>MEF2C, PURA, and RREB1</strong> are required during the short developmental window when early cardiomyocytes take on chamber-specific identity.
+            </p>
+            <p>
+              With human geneticists at UVA (Clint Miller, Saurabh Kulkarni), I found that all three genes are loss-of-function intolerant, conserved across species, and required for heart looping in <em>Xenopus</em>.
+            </p>
+            <p>
+              With Benoit Bruneau and Irfan Kathiriya (Gladstone/UCSF), we showed that MEF2C controls segment-specific GRNs in heart-tube morphogenesis (<a href="publications.html#p3">Genes Dev 2025</a>) and mapped the GRNs destabilized by reduced TBX5 dosage in human atrial iPSC-CMs (<a href="publications.html#p2">Development 2026</a>). I also built dynamic <a href="publications.html#p5">Netflux</a> models of how perturbations spread through cardiomyocyte signaling networks.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platforms -->
+    <section class="section" id="platforms">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow teal">Platforms</span>
+          <h2>Two platforms I built</h2>
+        </div>
+        <div class="split">
+          <div>
+            <h3>DynaGRIN</h3>
+            <p>
+              A general method that systematically perturbs scRNA-seq/scATAC-seq-inferred networks <em>in silico</em> to identify the transcription factors and regulons that control cell identity. Applied to heart-field GRNs, simulated knockdowns predicted <strong>32 TFs that tip atrial vs. ventricular identity</strong>: 20 atrial (e.g., <em>Nr2f2</em>, <em>Tbx5</em>) and 12 ventricular (e.g., <em>Hey2</em>, <em>Mef2c</em>).
+            </p>
+          </div>
+          <figure class="figure">
+            <img src="assets/img/research/grn-network.png" alt="Inferred heart-field gene regulatory network with Mef2c as a highly connected hub alongside Pitx2, Hoxb1, Tbx20, Fos, Plagl1 and others" width="620" height="620" loading="lazy" style="max-width:min(340px,100%)">
+            <figcaption>Inferred heart-field gene regulatory network. Node size reflects influence; <em>Mef2c</em> is a central hub.</figcaption>
+          </figure>
+        </div>
+        <div class="split flip" style="margin-top:48px">
+          <figure class="figure">
+            <div class="fig-grid-4">
+              <img src="assets/img/research/carbonite-1.jpg" alt="Calcium imaging, cardiomyocytes" loading="lazy">
+              <img src="assets/img/research/carbonite-2.jpg" alt="Calcium imaging, neural cells" loading="lazy">
+              <img src="assets/img/research/carbonite-3.jpg" alt="Calcium imaging, lymphatic endothelial cells" loading="lazy">
+              <img src="assets/img/research/carbonite-4.jpg" alt="Calcium imaging, mesoderm" loading="lazy">
+              <img src="assets/img/research/carbonite-5.jpg" alt="Immunostaining of the same cardiomyocytes" loading="lazy">
+              <img src="assets/img/research/carbonite-6.jpg" alt="Immunostaining of the same neural cells" loading="lazy">
+              <img src="assets/img/research/carbonite-7.jpg" alt="Immunostaining of the same lymphatic endothelial cells" loading="lazy">
+              <img src="assets/img/research/carbonite-8.jpg" alt="Immunostaining of the same mesoderm cells" loading="lazy">
+              <div class="lbl">Cardiomyocytes</div><div class="lbl">Neural</div><div class="lbl">Lymphatic EC</div><div class="lbl">Mesoderm</div>
+            </div>
+            <figcaption>Top: live calcium imaging. Bottom: post hoc immunostaining of the same cells, across four cell types.</figcaption>
+          </figure>
+          <div>
+            <h3>CARBONITE</h3>
+            <p>
+              CARBONITE pairs live calcium imaging with post hoc immunostaining of the same cells, linking function and molecular identity at single-cell resolution. In iPSC-CMs it revealed spatially organized functional states.
+            </p>
+            <p>
+              The method is now used in collaborations across BME and Cell Biology at UVA: in cardiomyocytes (Jeffrey Saucerman), neurons (Sameer Bajikar), endothelial cells (Karen Hirschi), and iPSCs (Eli Zunder).
+            </p>
+            <p><a href="https://doi.org/10.64898/2026.02.09.704922">Clark, Gergen &amp; Saucerman, preprint 2026 →</a></p>
           </div>
         </div>
-        <div class="hero-card">
-          <h2>Current themes</h2>
-          <ul class="list-reset highlight-list">
-            <li><strong>Cardiac development:</strong> Segment-specific gene regulatory subnetworks and chamber identity.</li>
-            <li><strong>Electrophysiology:</strong> Mechanistic models of iPSC-derived cardiomyocytes and arrhythmia risk.</li>
-            <li><strong>Systems tools:</strong> Logic-based network modeling for experimental collaborators.</li>
-          </ul>
-        </div>
       </div>
     </section>
 
-    <section class="section">
+    <!-- Area 1 -->
+    <section class="section alt" id="area-1">
       <div class="container">
-        <h2 class="section-header">Research directions</h2>
-        <div class="card-grid">
-          <article class="card">
-            <h3>Gene regulatory networks in cardiac development</h3>
+        <div class="section-head">
+          <div class="area-tag"><b>Area 1</b> How the program is built</div>
+          <h2>Gene regulatory network control of cardiomyocyte electrical identity</h2>
+          <p class="motto">model → predict → validate</p>
+        </div>
+        <div class="split">
+          <div>
             <p>
-              My postdoctoral work in the Saucerman lab focuses on how transcription factors like MEF2C and TBX5 orchestrate gene regulatory networks that drive heart tube morphogenesis and chamber specification.
+              My postdoc work suggests that cardiomyocyte electrical identity is set through discrete transitions in the earliest stages of heart formation. I identified TFs and regulatory networks that control two of them: <strong>the emergence of a cardiomyocyte from a cardiac progenitor</strong>, and <strong>the conversion of atrial and ventricular molecular identity into distinct electrophysiology</strong>.
             </p>
-          </article>
-          <article class="card">
-            <h3>Arrhythmia mechanisms &amp; cardiotoxicity</h3>
             <p>
-              I develop hybrid experimental-computational pipelines to interpret voltage-clamp and action-potential recordings, helping identify ionic mechanisms underlying drug-induced arrhythmias.
+              Many of these TFs are linked to morphogenetic defects in early heart development, but their roles in setting heart rhythm are unknown. A recurring feature is dosage sensitivity: humans do not tolerate loss-of-function mutations in even one copy of the gene.
             </p>
-          </article>
-          <article class="card">
-            <h3>Translational modeling platforms</h3>
+          </div>
+          <div class="hypothesis">
+            <span class="label">Central hypothesis</span>
+            Mutations in <strong>early, dosage-sensitive heart-forming TFs</strong> create cell-autonomous rhythm disturbances, <strong>independent of structural malformation</strong>.
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:28px">
+          <div class="diagram-scroll"><svg viewBox="0 0 900 170" width="100%" role="img" aria-label="Developmental timeline: cardiac progenitor with no beat, early cardiomyocyte with first beats, chamber identity at about day 20 where atrial and ventricular cells look alike, and chamber function at about day 27 where they diverge">
+            <line x1="40" y1="96" x2="860" y2="96" style="stroke:var(--border)" stroke-width="4"/>
+            <polygon points="860,88 876,96 860,104" style="fill:var(--border)"/>
+            <!-- progenitor -->
+            <line x1="70" y1="40" x2="160" y2="40" style="stroke:var(--muted)" stroke-width="3" opacity=".5"/>
+            <circle cx="115" cy="96" r="20" style="fill:var(--bg);stroke:var(--teal)" stroke-width="3"/>
+            <ellipse cx="115" cy="96" rx="8" ry="5" fill="#7cc3ca"/>
+            <text x="115" y="140" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--ink)">Cardiac progenitor</text>
+            <text x="115" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">no beat</text>
+            <!-- early CM -->
+            <path d="M285 52 h10 l6 -24 q6 2 12 22 l4 2 h10 l6 -24 q6 2 12 22 l4 2 h10" fill="none" style="stroke:var(--teal)" stroke-width="3"/>
+            <rect x="290" y="80" width="70" height="32" rx="16" style="fill:var(--teal)"/>
+            <ellipse cx="325" cy="96" rx="9" ry="6" fill="#7cc3ca"/>
+            <text x="325" y="140" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--ink)">Early cardiomyocyte</text>
+            <text x="325" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">first beats</text>
+            <!-- chamber identity -->
+            <path d="M500 52 h10 l6 -24 q6 2 12 22 l4 2 h10 l6 -24 q6 2 12 22 l4 2 h10" fill="none" style="stroke:var(--teal)" stroke-width="3"/>
+            <rect x="500" y="72" width="44" height="22" rx="11" fill="#7cc3ca"/><text x="522" y="88" text-anchor="middle" font-size="13" font-weight="800" fill="#0d2137">A</text>
+            <rect x="526" y="98" width="44" height="22" rx="11" fill="#0a5a62"/><text x="548" y="114" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">V</text>
+            <text x="535" y="140" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--ink)">Chamber identity</text>
+            <text x="535" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">~day 20: A, V alike</text>
+            <!-- chamber function -->
+            <path d="M705 54 h6 l4 -36 l10 30 l2 6 h6 l4 -36 l10 30 l2 6 h8" fill="none" stroke="#7cc3ca" stroke-width="3"/>
+            <path d="M705 54 h6 l4 -36 q10 4 18 36 h6 l4 -36 q10 4 18 36 h6" fill="none" stroke="#0a5a62" stroke-width="3"/>
+            <rect x="710" y="72" width="44" height="22" rx="11" fill="#7cc3ca"/><text x="732" y="88" text-anchor="middle" font-size="13" font-weight="800" fill="#0d2137">A</text>
+            <rect x="736" y="98" width="44" height="22" rx="11" fill="#0a5a62"/><text x="758" y="114" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">V</text>
+            <text x="745" y="140" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--ink)">Chamber function</text>
+            <text x="745" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">~day 27: A, V diverge</text>
+          </svg></div>
+          <div class="grid-2 small muted" style="margin-top:8px">
+            <div><span class="pill">1a</span> &nbsp;progenitor → beating cardiomyocyte</div>
+            <div><span class="pill">1b</span> &nbsp;chamber identity → chamber function</div>
+          </div>
+        </div>
+
+        <div class="subaim">
+          <h3><span class="pill">1a</span> How do gene regulatory networks build an electrically active cardiomyocyte?</h3>
+          <ul class="chips"><li>MEF2C</li><li>PURA</li><li>RREB1</li></ul>
+          <div class="split" style="margin-top:20px">
+            <div>
+              <p>
+                As the heart starts to take shape during the cardiac crescent-to-heart-tube transition, the first cardiomyocytes appear and begin to beat. My preliminary work suggests that newly active cardiomyocytes pass through a plastic, chamber-agnostic electrical state before atrial and ventricular electrophysiology diverge. Perturbing specific TFs (MEF2C, PURA, RREB1) during this transition strongly alters calcium handling.
+              </p>
+              <p>
+                <strong>My lab will look earlier.</strong> My GRNs and public snRNA-seq data suggest these genes are already expressed at the progenitor stage. We will use DynaGRIN to perturb these regulators in cardiac progenitor GRNs and predict changes to calcium and ion-channel genes, then test those perturbations in action potential models. Longitudinal calcium and voltage imaging of differentiating iPSC-CMs will catch the <em>first spontaneous beat</em> of a cardiomyocyte, and CARBONITE will link each newly active cell to its molecular identity.
+              </p>
+              <p class="muted">
+                Follow-on studies will look for dosage-sensitive regulators through which congenital heart disease mutations could create an arrhythmic substrate before, or independent of, structural malformation.
+              </p>
+            </div>
+            <figure class="figure">
+              <div class="fig-grid-2">
+                <div></div><div class="lbl">Control</div><div class="lbl kd">MEF2C KD</div>
+                <div class="lbl">ANP</div>
+                <img src="assets/img/research/mef2c-ctrl-anp.jpg" alt="ANP immunostaining, control" loading="lazy">
+                <img src="assets/img/research/mef2c-kd-anp.jpg" alt="ANP immunostaining, MEF2C knockdown, reduced signal" loading="lazy">
+                <div class="lbl">MYL2</div>
+                <img src="assets/img/research/mef2c-ctrl-myl2.jpg" alt="MYL2 immunostaining, control" loading="lazy">
+                <img src="assets/img/research/mef2c-kd-myl2.jpg" alt="MYL2 immunostaining, MEF2C knockdown, reduced signal" loading="lazy">
+              </div>
+              <figcaption><b>Postdoc data.</b> Knocking down MEF2C at day 13 depletes the atrial (ANP) and ventricular (MYL2) chamber markers a week later. PURA and RREB1 knockdowns do the same.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="subaim">
+          <h3><span class="pill">1b</span> How do gene regulatory networks turn chamber identity into chamber function?</h3>
+          <ul class="chips"><li>NR2F2</li><li>HEY2</li></ul>
+          <div class="split flip" style="margin-top:20px">
+            <figure class="figure">
+              <div style="display:grid;grid-template-columns:1.5fr 1fr;gap:8px;align-items:center">
+                <img src="assets/img/research/chamber-calcium-traces.png" alt="Calcium transients at day 20 and day 27 for bulk, ventricular and atrial cardiomyocytes; atrial transients become faster by day 27" loading="lazy">
+                <img src="assets/img/research/chamber-calcium-summary.png" alt="Summary of calcium time-to-peak for atrial and ventricular cardiomyocytes at day 20 and day 27" loading="lazy">
+              </div>
+              <figcaption><b>Postdoc data.</b> Atrial and ventricular identity is set by day 20, but atrial calcium kinetics only speed up by day 27.</figcaption>
+            </figure>
+            <div>
+              <p>
+                Atrial and ventricular cardiomyocytes establish distinct molecular identities <em>before</em> they acquire distinct electrophysiology. Human iPSC-CMs show atrial- and ventricular-specific molecular signatures by about day 20, but their calcium transients are still similar. Over the next seven days, their function splits into distinct atrial and ventricular calcium phenotypes.
+              </p>
+              <p>
+                I hypothesize that chamber-specifying TFs (e.g., NR2F2, HEY2) start a regulatory program that drives distinct ion-channel and calcium-handling machinery in each chamber. My lab will apply DynaGRIN to human fetal, human iPSC-CM, and mouse fetal GRNs to find regulators predicted to drive this divergence. We will build those predictions into mechanistic atrial and ventricular iPSC-CM action potential models, then perturb high-priority regulators as chamber-specific function emerges. Longitudinal imaging and endpoint CARBONITE will match each cell's emerging function with its molecular identity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="loop">
+          <div class="step"><b>MODEL</b><span>DynaGRIN in silico perturbation</span></div>
+          <div class="arr">→</div>
+          <div class="step"><b>PREDICT</b><span>Action potential models</span></div>
+          <div class="arr">→</div>
+          <div class="step"><b>TEST</b><span>Live imaging + CARBONITE</span></div>
+        </div>
+        <p class="outcome" style="margin-top:20px"><b>Outcome:</b> the dosage-sensitive regulators through which congenital heart disease mutations could create an arrhythmic substrate before, or independent of, malformation.</p>
+      </div>
+    </section>
+
+    <!-- Area 2 -->
+    <section class="section" id="area-2">
+      <div class="container">
+        <div class="section-head">
+          <div class="area-tag two"><b>Area 2</b> Why individual cells fail</div>
+          <h2>Single-cardiomyocyte determinants of electrical vulnerability</h2>
+          <p class="motto two">measure → encode → constrain</p>
+        </div>
+        <div class="split">
+          <div>
             <p>
-              I build modeling toolkits (including Netflux workflows) that allow biologists and clinicians to test hypotheses about cardiac signaling pathways and perturbations.
+              Protein expression and electrophysiological function vary from cell to cell in every biological system, even within one cell type. That variability is often useful, but in the heart it can go wrong and cause lethal arrhythmias.
             </p>
-          </article>
+            <p>
+              With only calcium dynamics and a few protein markers, CARBONITE found relationships among molecular identity, cellular neighborhood, and electrical function that could not be seen when each modality was measured separately. Later perturbation studies linked variation in regulatory state, such as TF abundance and protein interactions, to variation in functional response.
+            </p>
+          </div>
+          <div class="hypothesis two">
+            <span class="label">Central hypothesis</span>
+            The <strong>covariance</strong> among transcriptional regulators and electrophysiological effectors sets a cardiomyocyte's electrical phenotype more than any single abundance does, and <strong>predicts which cells diverge</strong> under perturbation.
+          </div>
+        </div>
+
+        <div class="subaim">
+          <h3><span class="pill coral">2a</span> What features of a cell predict its function?</h3>
+          <div class="split" style="margin-top:20px">
+            <div>
+              <p>
+                My lab will extend CARBONITE to measure voltage and calcium, followed by multiplexed molecular phenotyping of the same cells with iterative immunostaining. We will quantify TFs, ion channels, calcium-handling proteins, and structural features to build a joint molecular and electrophysiological profile for thousands of cardiomyocytes per experiment. We will test not only which proteins are present but how their abundance and <em>subcellular organization</em> predict function.
+              </p>
+              <p>
+                <strong>A new way to constrain models.</strong> Current population-of-models approaches vary ionic conductances across assumed distributions and treat parameters as largely independent. Instead, I will use measured covariance between regulators, effectors, and function to build <strong>molecularly constrained populations of models</strong>. Then I will test whether these better predict cell-to-cell variability in repolarization and calcium handling, and identify which molecular features make individual cells vulnerable.
+              </p>
+            </div>
+            <div>
+              <figure class="figure">
+                <div class="fig-row-3">
+                  <div><img src="assets/img/research/measure-calcium.jpg" alt="Live calcium imaging of a small cluster of segmented cardiomyocytes over time" loading="lazy"><div class="lbl">Calcium</div></div>
+                  <div><img src="assets/img/research/measure-if.jpg" alt="Immunofluorescence of the same segmented cells" loading="lazy"><div class="lbl">IF</div></div>
+                  <div><img src="assets/img/research/measure-imc.jpg" alt="Imaging of the same segmented cells, TNNT2 stain" loading="lazy"><div class="lbl">IMC</div></div>
+                </div>
+                <figcaption><b>Measure:</b> the same cells, three ways.</figcaption>
+              </figure>
+              <figure class="figure" style="margin-top:14px">
+                <img src="assets/img/research/covariance-heatmap.png" alt="Clustered Spearman correlation heatmap linking calcium features such as time to peak and amplitude with protein markers such as MYL2, MYH6/7, TNNT2, GATA4 and Cx43" loading="lazy" style="max-width:min(420px,100%)">
+                <figcaption><b>Encode:</b> single-cell covariance between calcium features and protein abundance (Spearman ρ).</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="subaim">
+          <h3><span class="pill coral">2b</span> Can we predict which cells are vulnerable to delayed proarrhythmic remodeling?</h3>
+          <div class="split flip" style="margin-top:20px">
+            <div class="card">
+              <svg viewBox="0 0 420 200" width="100%" role="img" aria-label="Acute ion-channel block is caught within minutes by current assays, while remodeling over hours to weeks produces divergent repolarization in different cells that acute assays miss">
+                <path d="M20 130 h20 l4 -90 l6 8 q30 6 46 70 l6 12 h40" fill="none" style="stroke:var(--ink)" stroke-width="3"/>
+                <path d="M44 40 l6 8 q40 6 56 70 l6 12" fill="none" style="stroke:var(--muted)" stroke-width="2.5" opacity=".6"/>
+                <text x="80" y="160" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--ink)">acute block: caught</text>
+                <path d="M220 130 h20 l4 -90 l6 8 q30 6 46 70 l6 12 h80" fill="none" style="stroke:var(--ink)" stroke-width="3"/>
+                <path d="M244 40 l6 8 q50 6 70 70 l6 12" fill="none" stroke="#efa394" stroke-width="2.5"/>
+                <path d="M244 40 l6 8 q70 6 96 70 l6 12" fill="none" style="stroke:var(--coral)" stroke-width="2.5"/>
+                <text x="300" y="160" text-anchor="middle" font-size="12" font-weight="700" style="fill:var(--coral)">same drug, different cells</text>
+                <line x1="20" y1="182" x2="400" y2="182" style="stroke:var(--muted)" stroke-width="1.5"/>
+                <g font-size="11" style="fill:var(--muted)" text-anchor="middle"><text x="60" y="198">minutes</text><text x="200" y="198">hours</text><text x="290" y="198">days</text><text x="380" y="198">weeks</text></g>
+              </svg>
+            </div>
+            <div>
+              <p>
+                Preclinical proarrhythmia assessment is good at catching drugs that directly perturb cardiac ion channels. It falls short when drugs <em>indirectly</em> remodel cardiomyocyte state, as cancer therapies that target transcriptional and signaling machinery do. HDAC and CDK4/6 inhibitors, for example, may change ion-channel expression and alter repolarization beyond acute channel block. These effects appear over hours to days, so conventional acute assays capture them poorly.
+              </p>
+              <p>
+                I hypothesize that cancer therapeutics create arrhythmic vulnerability by remodeling regulatory state, and that the effect depends on each cell's molecular state before and during treatment. We will expose human iPSC-CMs to transcription-targeting cancer drugs for days to weeks, follow each cell's electrical trajectory with longitudinal imaging, and use CARBONITE to find the TF and ion-channel changes that explain it. Candidate mechanisms will be tested causally by genetic perturbation.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p class="outcome two" style="margin-top:28px"><b>Outcome:</b> mechanisms of remodeling-driven proarrhythmia, the cell states most vulnerable to it, and a new link to cardio-oncology.</p>
+      </div>
+    </section>
+
+    <!-- Outlook -->
+    <section class="section alt" id="outlook">
+      <div class="container">
+        <div class="callout">
+          <span class="label">Significance &amp; outlook</span>
+          <h2>A collaborative, integrative lab</h2>
+          <div class="split">
+            <div>
+              <p>
+                My lab will train undergraduates, graduate students, postdocs, and scientists from different disciplines in an environment built around collaborative, integrative work on hard biological problems.
+              </p>
+              <p>
+                By combining New Approach Methods (human-based and computational models) with systems bioengineering to study both development and acquired disease, the program can compete across many funding mechanisms. The cancer-therapy remodeling studies also connect to NCI and NHLBI priorities in cardio-oncology and treatment-related cardiotoxicity.
+              </p>
+            </div>
+            <div>
+              <p class="small" style="margin-bottom:6px;color:#9fb3c8">AWARDED</p>
+              <ul class="chips dark"><li>NIH F31</li><li>CVRC T32</li><li>NIH F32 (10th %ile; declined)</li><li>AHA Postdoctoral Fellowship</li><li>Coulter Postdoctoral Award</li></ul>
+              <p class="small" style="margin:16px 0 6px;color:#9fb3c8">PENDING</p>
+              <ul class="chips dark"><li>NIH K99/R00 (NHLBI): impact score 38, awaiting council</li></ul>
+              <p class="small" style="margin:16px 0 6px;color:#9fb3c8">NEXT</p>
+              <ul class="chips dark"><li class="next">R01</li><li class="next">DP2</li><li class="next">R35 MIRA</li><li class="next">NSF CAREER</li><li class="next">NSF EAGER</li><li class="next">AHA</li><li class="next">Additional Ventures</li><li class="next">NCI/NHLBI cardio-oncology</li></ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container two-column">
-        <div>
-          <h2 class="section-header">Methods &amp; approaches</h2>
-          <p>
-            My work combines experimental data with mechanistic models, emphasizing interpretability and translation. I regularly use high-throughput voltage clamp, single-cell electrophysiology, RNA-seq datasets, and dynamical systems modeling.
-          </p>
-          <p>
-            I am especially interested in collaborative research that integrates wet-lab experimentation with predictive modeling to inform therapeutic strategies.
-          </p>
+    <!-- Collaborators -->
+    <section class="section" id="collaborators">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow teal">Collaborators</span>
+          <h2>Working with</h2>
         </div>
-        <div class="callout">
-          <h3>Open to collaboration</h3>
-          <p>
-            I welcome collaborations that explore cardiac development, arrhythmia mechanisms, or data-driven network inference. Please reach out if you are interested in joint projects, workshops, or seminar invitations.
-          </p>
-          <p><a href="mailto:apc5un@virginia.edu">apc5un@virginia.edu</a></p>
+        <div class="grid-3">
+          <div class="card"><ul class="people"><li><b>Benoit Bruneau &amp; Irfan Kathiriya</b><span>Gladstone Institutes / UCSF · cardiac development, TBX5, MEF2C</span></li></ul></div>
+          <div class="card"><ul class="people"><li><b>Clint Miller &amp; Saurabh Kulkarni</b><span>UVA · human genetics, <em>Xenopus</em> heart looping</span></li></ul></div>
+          <div class="card"><ul class="people"><li><b>Karen Hirschi, Sameer Bajikar, Eli Zunder</b><span>UVA · CARBONITE across endothelial cells, neurons, iPSCs</span></li></ul></div>
+        </div>
+        <div class="button-row">
+          <a class="btn outline" href="publications.html">Publications</a>
+          <a class="btn outline" href="cv.html">Full CV</a>
+          <a class="btn outline" href="mailto:apc5un@virginia.edu">Email me</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <h3>Contact</h3>
-        <p>Email: apc5un@virginia.edu</p>
-        <p>Location: Charlottesville, VA</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Alexander P. Clark, Ph.D.</h3>
+          <p>Systems Biology Lab for Cardiac Development &amp; Electrophysiology</p>
+          <p>Department of Biomedical Engineering, University of Virginia</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="mailto:apc5un@virginia.edu">apc5un@virginia.edu</a></p>
+          <p>Charlottesville, VA</p>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <p><a href="https://github.com/apclarkva">GitHub</a></p>
+          <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/">NCBI bibliography</a></p>
+        </div>
       </div>
-      <div>
-        <h3>External</h3>
-        <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/" target="_blank" rel="noreferrer">NCBI bibliography</a></p>
-        <p><a href="https://github.com/apclarkva" target="_blank" rel="noreferrer">GitHub</a></p>
-      </div>
+      <div class="footer-bottom">Last updated October 2026</div>
     </div>
   </footer>
+  <script src="site.js?v=4"></script>
 </body>
 </html>

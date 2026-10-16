@@ -4,85 +4,213 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Publications | Alexander P. Clark</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Publications and preprints by Alexander P. Clark on cardiac gene regulatory networks, single-cell electrophysiology, and network modeling.">
+  <meta name="theme-color" content="#0d2137">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">Alexander P. Clark, Ph.D.</div>
-      <nav class="nav-links">
+      <a class="logo" href="index.html">Alexander P. Clark<span>, Ph.D.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav-links" id="nav">
         <a href="index.html">About</a>
         <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="teaching-service.html">Teaching &amp; Service</a>
+        <a href="publications.html" aria-current="page">Publications</a>
+        <a href="cv.html">CV</a>
+        <a href="teaching-service.html">Teaching &amp; Mentoring</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero page-hero">
       <div class="container">
-        <h1 class="hero-title">Publications &amp; preprints</h1>
-        <p class="hero-subtitle">
-          A selection of peer-reviewed articles, preprints, and collaborative work. The full bibliography is available on NCBI.
-        </p>
+        <span class="eyebrow">Publications</span>
+        <h1>Papers &amp; preprints</h1>
+        <p class="lede">13 publications: 7 first-author journal articles, a first-author preprint, and a co-first-author conference paper. Numbering matches my CV.</p>
         <div class="button-row">
-          <a class="btn primary" href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/" target="_blank" rel="noreferrer">Full bibliography</a>
-          <a class="btn" href="research.html">Research focus</a>
+          <a class="btn ghost" href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/">NCBI bibliography</a>
+          <a class="btn ghost" href="cv.html">Full CV</a>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <h2 class="section-header">Peer-reviewed publications</h2>
-        <ol class="list-reset pub-list">
-          <li>Clark AP, Chowkwale M, Paap A, Dang S, Saucerman JJ. Logic-based modeling of biological networks with Netflux. <em>PLOS Computational Biology</em>. Feb 2025.</li>
-          <li>Clark AP, Wei S, Krogh-Madsen T, Christini DJ. Single-cell ionic current phenotyping elucidates noncanonical features and predictive potential of cardiomyocytes during automated drug experiments. <em>Journal of Physiology</em>. 2024 May 15.</li>
-          <li>Clark AP, Krogh-Madsen T, Christini DJ. Stem cell-derived cardiomyocyte heterogeneity confounds electrophysiological insights. <em>Journal of Physiology</em>. 2024 May 15.</li>
-          <li>Clark AP, Wei S, Fullerton K, Krogh-Madsen T, Christini DJ. Single-cell ionic current phenotyping explains stem cell-derived cardiomyocyte action potential morphology. <em>American Journal of Physiology - Heart and Circulatory Physiology</em>. 2024 May 1;326(5):H1146-H1154.</li>
-          <li>Fullerton KE, Clark AP, Krogh-Madsen T, Christini DJ. Optimization of a cardiomyocyte model illuminates role of increased INa,L in repolarization reserve. <em>American Journal of Physiology - Heart and Circulatory Physiology</em>. 2024 Feb 1;326(2):H334-H345.</li>
-          <li>Clark AP, Clerx M, Wei S, Lei CL, de Boer TP, Mirams GR, Christini DJ, Krogh-Madsen T. Leak current, even with gigaohm seals, can cause misinterpretation of stem cell-derived cardiomyocyte action potential recordings. <em>Europace</em>. 2023 Aug 2;25(9):euad243.</li>
-          <li>Clark AP, Wei S, Kalola D, Krogh-Madsen T, Christini DJ. An in silico-in vitro pipeline for drug cardiotoxicity screening identifies ionic pro-arrhythmia mechanisms. <em>British Journal of Pharmacology</em>. 2022 Oct;179(20):4829-4843.</li>
-          <li>Parker KM, Clark AP, Goodman NC, Glover DK, Holmes JW. Comparison of quantitative wall-motion analysis and strain for detection of coronary stenosis with three-dimensional dobutamine stress echocardiography. <em>Echocardiography</em>. 2015 Feb;32(2):349-60.</li>
-        </ol>
-      </div>
-    </section>
+      <div class="container narrow">
+        <div class="pub-tools" role="group" aria-label="Filter publications">
+          <button class="filter" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="first" aria-pressed="false">First author</button>
+          <button class="filter" data-filter="grn" aria-pressed="false">Gene regulatory networks</button>
+          <button class="filter" data-filter="ep" aria-pressed="false">Electrophysiology</button>
+          <button class="filter" data-filter="methods" aria-pressed="false">Methods &amp; tools</button>
+        </div>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-header">Accepted &amp; forthcoming</h2>
-        <ol class="list-reset pub-list">
-          <li>Muncie-Vasic JM, Sinha T, Clark AP, Brower EF, Saucerman JJ, Black BL, Bruneau B. Heart tube morphogenesis is regulated by segment-specific gene regulatory networks controlled by MEF2C. Accepted at <em>Genes &amp; Development</em>. July 2025. Preprint: doi:10.1101/2024.11.01.621613.</li>
-          <li>Lei CL*, Clark AP*, Clerx M, Wei S, Bloothooft M, de Boer TP, Christini DJ, Krogh-Madsen T, Mirams GR. Resolving artefacts in voltage-clamp experiments with computational modelling: an application to fast sodium current recordings. <em>Advanced Science</em>. June 2025. <em>*Joint first authorship.</em></li>
-        </ol>
-      </div>
-    </section>
+        <div class="pub-group">
+          <h2>Preprints</h2>
+          <ol class="pubs">
+            <li class="pub" id="p1" data-tags="first grn methods">
+              <div class="n">1</div>
+              <div>
+                <span class="title">Paired single-cell imaging of calcium and expression to map niches of identity and function</span>
+                <div class="authors"><b>Clark AP</b>, Gergen P, Saucerman JJ</div>
+                <div class="venue"><em>bioRxiv</em> (Bioengineering), 2026</div>
+                <p class="pub-blurb">Introduces CARBONITE: live calcium imaging plus immunostaining of the same cells.</p>
+                <div class="tags"><span class="tag first">First author</span><a class="tag doi" href="https://doi.org/10.64898/2026.02.09.704922">doi:10.64898/2026.02.09.704922</a></div>
+              </div>
+            </li>
+          </ol>
+        </div>
 
-    <section class="section">
-      <div class="container">
-        <h2 class="section-header">Preprints</h2>
-        <ol class="list-reset pub-list">
-          <li>Kathiriya IS, Rao KS, Clark AP, Hu KM, Grant ZL, Matthews MN, Chen Z, Saucerman JJ, Hota S, Bruneau B. Reduced TBX5 dosage undermines developmental control of atrial cardiomyocyte identity in a model of human atrial disease. <em>bioRxiv</em>. 2025. doi:10.1101/2025.08.16.669546.</li>
-        </ol>
+        <div class="pub-group">
+          <h2>Peer-reviewed journal articles</h2>
+          <ol class="pubs">
+            <li class="pub" id="p2" data-tags="grn">
+              <div class="n">2</div>
+              <div>
+                <span class="title">Reduced TBX5 dosage undermines developmental control of atrial cardiomyocyte identity in a model of human atrial disease</span>
+                <div class="authors">Kathiriya IS, Rao KS, <b>Clark AP</b>, Hu KM, Grant ZL, Matthews MN, et al.</div>
+                <div class="venue"><em>Development</em>. 2026;153:dev205173</div>
+                <div class="tags"><a class="tag doi" href="https://doi.org/10.1242/dev.205173">doi:10.1242/dev.205173</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p3" data-tags="grn">
+              <div class="n">3</div>
+              <div>
+                <span class="title">MEF2C controls segment-specific gene regulatory networks that direct heart tube morphogenesis</span>
+                <div class="authors">Muncie-Vasic JM, Sinha T, <b>Clark AP</b>, Brower EF, Saucerman JJ, Black BL, et al.</div>
+                <div class="venue"><em>Genes &amp; Development</em>. 2025</div>
+                <div class="tags"><a class="tag doi" href="https://doi.org/10.1101/gad.352889.125">doi:10.1101/gad.352889.125</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p4" data-tags="first ep methods">
+              <div class="n">4</div>
+              <div>
+                <span class="title">Resolving artifacts in voltage-clamp experiments with computational modeling: an application to fast sodium current recordings</span>
+                <div class="authors">Lei CL*, <b>Clark AP*</b>, Clerx M, Wei S, Bloothooft M, de Boer TP, et al. <span class="small">*Joint first authorship</span></div>
+                <div class="venue"><em>Advanced Science</em>. 2025;e00691</div>
+                <div class="tags"><span class="tag first">Co-first author</span><a class="tag doi" href="https://doi.org/10.1002/advs.202500691">doi:10.1002/advs.202500691</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p5" data-tags="first grn methods">
+              <div class="n">5</div>
+              <div>
+                <span class="title">Logic-based modeling of biological networks with Netflux</span>
+                <div class="authors"><b>Clark AP</b>, Chowkwale M, Paap A, Dang S, Saucerman JJ</div>
+                <div class="venue"><em>PLOS Computational Biology</em>. 2025;21:e1012864</div>
+                <div class="tags"><span class="tag first">First author</span><a class="tag doi" href="https://doi.org/10.1371/journal.pcbi.1012864">doi:10.1371/journal.pcbi.1012864</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p6" data-tags="ep">
+              <div class="n">6</div>
+              <div>
+                <span class="title">Optimization of a cardiomyocyte model illuminates role of increased I<sub>Na,L</sub> in repolarization reserve</span>
+                <div class="authors">Fullerton KE, <b>Clark AP</b>, Krogh-Madsen T, Christini DJ</div>
+                <div class="venue"><em>Am J Physiol Heart Circ Physiol</em>. 2024;326:H334–H345</div>
+                <div class="tags"><a class="tag doi" href="https://doi.org/10.1152/ajpheart.00553.2023">doi:10.1152/ajpheart.00553.2023</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p7" data-tags="first ep">
+              <div class="n">7</div>
+              <div>
+                <span class="title">Single-cell ionic current phenotyping explains stem cell-derived cardiomyocyte action potential morphology</span>
+                <div class="authors"><b>Clark AP</b>, Wei S, Fullerton K, Krogh-Madsen T, Christini DJ</div>
+                <div class="venue"><em>Am J Physiol Heart Circ Physiol</em>. 2024;326:H1146–H1154</div>
+                <div class="tags"><span class="tag first">First author</span><a class="tag doi" href="https://doi.org/10.1152/ajpheart.00063.2024">doi:10.1152/ajpheart.00063.2024</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p8" data-tags="first ep">
+              <div class="n">8</div>
+              <div>
+                <span class="title">Single-cell ionic current phenotyping elucidates non-canonical features and predictive potential of cardiomyocytes during automated drug experiments</span>
+                <div class="authors"><b>Clark AP</b>, Wei S, Christini DJ, Krogh-Madsen T</div>
+                <div class="venue"><em>Journal of Physiology</em>. 2024</div>
+                <div class="tags"><span class="tag first">First author</span><a class="tag doi" href="https://doi.org/10.1113/JP285120">doi:10.1113/JP285120</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p9" data-tags="first ep">
+              <div class="n">9</div>
+              <div>
+                <span class="title">Stem cell-derived cardiomyocyte heterogeneity confounds electrophysiological insights</span>
+                <div class="authors"><b>Clark AP</b>, Krogh-Madsen T, Christini DJ</div>
+                <div class="venue"><em>Journal of Physiology</em>. 2024</div>
+                <div class="tags"><span class="tag first">First author</span><a class="tag doi" href="https://doi.org/10.1113/JP284618">doi:10.1113/JP284618</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p10" data-tags="first ep methods">
+              <div class="n">10</div>
+              <div>
+                <span class="title">Leak current, even with gigaohm seals, can cause misinterpretation of stem cell-derived cardiomyocyte action potential recordings</span>
+                <div class="authors"><b>Clark AP</b>, Clerx M, Wei S, Lei CL, de Boer TP, Mirams GR, et al.</div>
+                <div class="venue"><em>Europace</em>. 2023;25:euad243</div>
+                <div class="tags"><span class="tag first">First author</span><a class="tag doi" href="https://doi.org/10.1093/europace/euad243">doi:10.1093/europace/euad243</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p11" data-tags="first ep methods">
+              <div class="n">11</div>
+              <div>
+                <span class="title">An in silico–in vitro pipeline for drug cardiotoxicity screening identifies ionic pro-arrhythmia mechanisms</span>
+                <div class="authors"><b>Clark AP</b>, Wei S, Kalola D, Krogh-Madsen T, Christini DJ</div>
+                <div class="venue"><em>British Journal of Pharmacology</em>. 2022;179:4829–4843</div>
+                <p class="pub-blurb">Genetic-algorithm-designed voltage-clamp protocols showed that quinine blocks the funny current.</p>
+                <div class="tags"><span class="tag first">First author</span><a class="tag doi" href="https://doi.org/10.1111/bph.15915">doi:10.1111/bph.15915</a></div>
+              </div>
+            </li>
+            <li class="pub" id="p12" data-tags="">
+              <div class="n">12</div>
+              <div>
+                <span class="title">Comparison of quantitative wall-motion analysis and strain for detection of coronary stenosis with three-dimensional dobutamine stress echocardiography</span>
+                <div class="authors">Parker KM, <b>Clark AP</b>, Goodman NC, Glover DK, Holmes JW</div>
+                <div class="venue"><em>Echocardiography</em>. 2015;32:349–360</div>
+                <div class="tags"><a class="tag doi" href="https://doi.org/10.1111/echo.12636">doi:10.1111/echo.12636</a></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="pub-group">
+          <h2>Peer-reviewed conference proceedings</h2>
+          <ol class="pubs">
+            <li class="pub" id="p13" data-tags="first">
+              <div class="n">13</div>
+              <div>
+                <span class="title">Integration of social and ethical AI topics into a computational biomedical engineering course increases engagement without loss of technical learning</span>
+                <div class="authors"><b>Clark AP*</b>, Groves SM*, Wintruba KL, Saucerman JJ <span class="small">*Joint first authorship</span></div>
+                <div class="venue"><em>2026 ASEE Annual Conference &amp; Exposition</em>, Charlotte, NC</div>
+                <div class="tags"><span class="tag first">Co-first author</span><a class="tag doi" href="https://doi.org/10.18260/1-2--60158">doi:10.18260/1-2--60158</a></div>
+              </div>
+            </li>
+          </ol>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <h3>Contact</h3>
-        <p>Email: apc5un@virginia.edu</p>
-        <p>Location: Charlottesville, VA</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Alexander P. Clark, Ph.D.</h3>
+          <p>Systems Biology Lab for Cardiac Development &amp; Electrophysiology</p>
+          <p>Department of Biomedical Engineering, University of Virginia</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="mailto:apc5un@virginia.edu">apc5un@virginia.edu</a></p>
+          <p>Charlottesville, VA</p>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <p><a href="https://github.com/apclarkva">GitHub</a></p>
+          <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/">NCBI bibliography</a></p>
+        </div>
       </div>
-      <div>
-        <h3>External</h3>
-        <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/" target="_blank" rel="noreferrer">NCBI bibliography</a></p>
-        <p><a href="https://github.com/apclarkva" target="_blank" rel="noreferrer">GitHub</a></p>
-      </div>
+      <div class="footer-bottom">Last updated October 2026</div>
     </div>
   </footer>
+  <script src="site.js?v=4"></script>
 </body>
 </html>

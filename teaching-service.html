@@ -3,94 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teaching &amp; Service | Alexander P. Clark</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Teaching &amp; Mentoring | Alexander P. Clark</title>
+  <meta name="description" content="Teaching, mentoring, and service by Alexander P. Clark: Teach For America, Codecademy, graduate teaching, and undergraduate research mentoring.">
+  <meta name="theme-color" content="#0d2137">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">Alexander P. Clark, Ph.D.</div>
-      <nav class="nav-links">
+      <a class="logo" href="index.html">Alexander P. Clark<span>, Ph.D.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav-links" id="nav">
         <a href="index.html">About</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
-        <a href="teaching-service.html">Teaching &amp; Service</a>
+        <a href="cv.html">CV</a>
+        <a href="teaching-service.html" aria-current="page">Teaching &amp; Mentoring</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero page-hero">
       <div class="container">
-        <h1 class="hero-title">Teaching, mentoring &amp; service</h1>
-        <p class="hero-subtitle">
-          I prioritize mentoring and inclusive training environments, drawing from experiences in higher education, industry curriculum design, and K-12 teaching. I am committed to building collaborative research communities.
-        </p>
+        <span class="eyebrow">Teaching, mentoring &amp; service</span>
+        <h1>Teaching shaped how I do science</h1>
+        <p class="lede">I taught middle-school science in the Bronx and built Codecademy courses for more than 100,000 learners before starting my Ph.D. That experience shapes how I teach engineering and mentor trainees.</p>
       </div>
     </section>
 
     <section class="section">
-      <div class="container card-grid">
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><div class="num">100k+</div><div class="what">learners</div><div class="sub">Codecademy courses I led</div></div>
+          <div class="stat"><div class="num">2</div><div class="what">years in the classroom</div><div class="sub">Teach For America, Bronx</div></div>
+          <div class="stat"><div class="num">2026</div><div class="what">Mentorship Award</div><div class="sub">UVA BME postdoc award</div></div>
+          <div class="stat"><div class="num">ASEE</div><div class="what">2026 paper</div><div class="sub">AI ethics in computational BME</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container grid-3">
         <article class="card">
-          <h2>Teaching experience</h2>
-          <ul class="list-reset highlight-list">
-            <li>Graduate TA, Core Principles of Molecular Biophysics (Weill Cornell, 2020–2021)</li>
-            <li>Undergraduate TA, Electrical and Chemical Physiology (Cornell, 2019)</li>
-            <li>Undergraduate TA, Cell and Molecular Biology (UVA, 2014)</li>
-            <li>Middle school science teacher, M.S. 118, Teach For America (2014–2016)</li>
+          <h3>Teaching</h3>
+          <ul class="people">
+            <li><b>Graduate TA, Core Principles of Molecular Biophysics</b><span>Weill Cornell · 2020–2021 · Ph.D. Teaching Fellowship</span></li>
+            <li><b>Undergraduate TA, Electrical and Chemical Physiology</b><span>Cornell · 2019</span></li>
+            <li><b>Middle school science teacher, M.S. 118</b><span>Bronx, NY · Teach For America · 2014–2016</span></li>
+            <li><b>Curriculum developer and manager</b><span>Codecademy · 2016–2018 · courses for &gt;100,000 learners</span></li>
+            <li><b>Undergraduate TA, Cell and Molecular Biology</b><span>UVA · 2014</span></li>
           </ul>
         </article>
         <article class="card">
-          <h2>Mentoring</h2>
-          <ul class="list-reset highlight-list">
-            <li>Mentor to Payton Gergen, UVA undergraduate researcher (2023–present)</li>
-            <li>Mentor to Darshan Kalola, NSF REU summer student (2019)</li>
-            <li>Mentor, Weill Cornell Catalyst Program (2022)</li>
+          <h3>Mentoring</h3>
+          <ul class="people">
+            <li><b>Payton Gergen</b><span>UVA undergraduate researcher, 2023–present. Harrison Award; 2nd (2026) and 3rd (2025) place at the UVA Undergraduate Research Symposium; co-author on the CARBONITE preprint.</span></li>
+            <li><b>Darshan Kalola</b><span>Summer REU student from Rutgers, 2019. Third author on Clark et al., <em>Br J Pharmacol</em> 2022.</span></li>
+            <li><b>Weill Cornell Catalyst Program</b><span>Mentored a high school student for a summer in the Christini lab, 2022.</span></li>
           </ul>
         </article>
         <article class="card">
-          <h2>Service &amp; leadership</h2>
-          <ul class="list-reset highlight-list">
-            <li>Chair, UVA BME postdoc success committee (2024–present)</li>
-            <li>Reviewer for PLOS Computational Biology, Journal of Physiology, and related journals</li>
-            <li>EMT-Basic and Crew Captain, Charlottesville Albemarle Rescue Squad (2011–2014)</li>
+          <h3>Service &amp; leadership</h3>
+          <ul class="people">
+            <li><b>Chair, UVA BME Postdoc Success Committee</b><span>2024–present · 2025 Postdoc Leadership and Service Award</span></li>
+            <li><b>Peer reviewer</b><span>PLOS Comput Biol, J Gen Physiol, J Physiol, Naunyn-Schmiedeberg's Arch Pharmacol, Int J Numer Methods Biomed Eng</span></li>
+            <li><b>Computer science teacher</b><span>Brooklyn Community Services (adults, 2020) · ScriptEd (high school, 2017–2018)</span></li>
+            <li><b>EMT-Basic and Crew Captain</b><span>Charlottesville Albemarle Rescue Squad, 2011–2014</span></li>
           </ul>
         </article>
       </div>
     </section>
 
     <section class="section">
-      <div class="container two-column">
+      <div class="container split">
         <div>
-          <h2 class="section-header">Professional experience</h2>
+          <span class="eyebrow teal">Teaching research</span>
+          <h2>Teaching AI ethics alongside technical skills</h2>
           <p>
-            In addition to my academic training, I led curriculum development at Codecademy, building courses used by more than 100,000 learners. These experiences shape my approach to designing clear, student-centered learning experiences.
+            With Groves, Wintruba, and Saucerman (UVA BME), I helped add social and ethical AI topics to a computational biomedical engineering course. Student engagement went up with no loss of technical learning. We presented the results at the 2026 ASEE Annual Conference.
           </p>
+          <p><a href="https://doi.org/10.18260/1-2--60158">Read the paper →</a></p>
         </div>
         <div class="callout">
-          <h3>Community engagement</h3>
-          <p>
-            I have taught computer science through Brooklyn Community Services and ScriptEd, expanding access to technical education for diverse learners.
-          </p>
+          <span class="label">In my lab</span>
+          <p style="margin:0">My lab will train undergraduates, graduate students, and postdocs from different disciplines in an environment built around collaborative, integrative science, where trainees learn to work across computational models and wet-lab experiments.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <h3>Contact</h3>
-        <p>Email: apc5un@virginia.edu</p>
-        <p>Location: Charlottesville, VA</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Alexander P. Clark, Ph.D.</h3>
+          <p>Systems Biology Lab for Cardiac Development &amp; Electrophysiology</p>
+          <p>Department of Biomedical Engineering, University of Virginia</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="mailto:apc5un@virginia.edu">apc5un@virginia.edu</a></p>
+          <p>Charlottesville, VA</p>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <p><a href="https://github.com/apclarkva">GitHub</a></p>
+          <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/">NCBI bibliography</a></p>
+        </div>
       </div>
-      <div>
-        <h3>External</h3>
-        <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/" target="_blank" rel="noreferrer">NCBI bibliography</a></p>
-        <p><a href="https://github.com/apclarkva" target="_blank" rel="noreferrer">GitHub</a></p>
-      </div>
+      <div class="footer-bottom">Last updated October 2026</div>
     </div>
   </footer>
+  <script src="site.js?v=4"></script>
 </body>
 </html>

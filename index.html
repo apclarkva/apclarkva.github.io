@@ -3,115 +3,241 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alexander P. Clark | Cardiac Systems Biology</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600,700" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>Alexander P. Clark, Ph.D.</title>
+  <meta name="description" content="Alexander P. Clark, Ph.D. — systems biology of cardiac development and electrophysiology. How gene regulatory networks build electrical identity into cardiomyocytes, and how that program is remodeled in disease.">
+  <meta property="og:title" content="Alexander P. Clark, Ph.D. — Cardiac Systems Biology">
+  <meta property="og:description" content="How gene regulatory networks build electrical identity into cardiomyocytes, and how that program is remodeled in disease.">
+  <meta property="og:image" content="https://apclarkva.github.io/assets/img/alex_headshot_2.jpg">
+  <meta name="theme-color" content="#0d2137">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">Alexander P. Clark, Ph.D.</div>
-      <nav class="nav-links">
-        <a href="index.html">About</a>
+      <a class="logo" href="index.html">Alexander P. Clark<span>, Ph.D.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav class="nav-links" id="nav">
+        <a href="index.html" aria-current="page">About</a>
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
-        <a href="teaching-service.html">Teaching &amp; Service</a>
+        <a href="cv.html">CV</a>
+        <a href="teaching-service.html">Teaching &amp; Mentoring</a>
       </nav>
     </div>
   </header>
 
   <main>
-	<section class="hero">
-	  <div class="container hero-grid">
-	    <div>
-	      <img
-	        class="profile-image"
-	        src="/assets/img/headshot.jpg"
-	        alt="Portrait of Alexander P. Clark"
-	        loading="eager"
-	      />
-	    </div>
-	    <div class="hero-card">
-	      <h1 class="hero-title">Postdoctoral researcher in cardiac systems biology.</h1>
-	      <p class="hero-subtitle">
-	        I study gene regulatory networks and electrophysiology to understand how cardiomyocytes develop, adapt, and malfunction. I am preparing for a faculty search in 2026 and welcome opportunities to collaborate.
-	      </p>
-	      <div class="button-row">
-	        <a class="btn primary" href="publications.html">View publications</a>
-	        <a class="btn" href="research.html">Research focus</a>
-	      </div>
-	    </div>
-	  </div>
-	</section>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Cardiac development &amp; electrophysiology</span>
+          <h1>How gene networks build the heart's electrical identity</h1>
+          <p class="lede">
+            I study how transcription factors set the ion channels, calcium handling, and connexins of each cardiomyocyte, and how that program is remodeled in disease. My lab will pair network models with single-cell measurements of the same cells.
+          </p>
+          <p class="hero-meta">
+            <strong>Postdoctoral Fellow</strong>, Saucerman Lab · Department of Biomedical Engineering · University of Virginia<br>
+            On the faculty job market for 2026–27.
+          </p>
+          <div class="button-row">
+            <a class="btn primary" href="research.html">Research program</a>
+            <a class="btn ghost" href="cv.html">Full CV</a>
+            <a class="btn ghost" href="mailto:apc5un@virginia.edu">apc5un@virginia.edu</a>
+          </div>
+        </div>
+        <div class="headshot-wrap">
+          <img class="headshot" src="assets/img/alex_headshot_2.jpg" alt="Portrait of Alexander P. Clark" width="708" height="782">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-bottom:0">
+      <div class="container">
+        <div class="banner">
+          <p><strong>Here from BMES 2026?</strong> I'm in the Meet the Faculty Candidate forum and giving a talk on stage-specific gene regulatory networks in human cardiomyocyte differentiation.</p>
+          <a class="btn outline" href="bmes.html">Poster companion →</a>
+        </div>
+      </div>
+    </section>
 
     <section class="section">
-      <div class="container two-column">
+      <div class="container split">
         <div>
-          <h2 class="section-header">About me</h2>
-          <p class="section-subtitle">
-            I am a postdoctoral researcher in the University of Virginia Department of Biomedical Engineering with Dr. Jeffrey Saucerman. My work integrates experimental measurements with computational models to decode how transcriptional programs shape cardiac development and disease.
+          <span class="eyebrow teal">The question</span>
+          <h2>Arrhythmias start with the electrical identity of single cells</h2>
+          <p>
+            Gene regulatory networks set each cardiomyocyte's electrical identity: which ion channels, calcium-handling proteins, and connexins it expresses. Those links have mostly been worked out one gene at a time.
           </p>
           <p>
-            Previously, I earned my Ph.D. in Biomedical Engineering at Cornell University with Dr. David Christini, where I developed single-cell phenotyping approaches to explain heterogeneity in stem cell-derived cardiomyocytes and uncover mechanisms of arrhythmia.
+            <strong>My lab will work at the level of the whole network.</strong> The long-term goal is to understand how these networks establish and maintain cardiomyocyte electrophysiology, and how changes to them cause pathogenic remodeling.
           </p>
         </div>
-        <div class="callout">
-          <h3>At a glance</h3>
-          <ul class="list-reset highlight-list">
-            <li><strong>Position:</strong> Postdoctoral Researcher, University of Virginia</li>
-            <li><strong>Training:</strong> Ph.D., Biomedical Engineering (Cornell University)</li>
-            <li><strong>Fellowships:</strong> AHA Postdoctoral Fellow, UVA Cardiovascular T32</li>
-            <li><strong>Research themes:</strong> Gene regulatory networks, cardiac development, electrophysiology, computational modeling</li>
-          </ul>
+        <div class="card">
+          <div class="pipeline" aria-label="Gene regulatory network to cardiomyocyte to electrical identity">
+            <div class="node">
+              <svg width="120" height="80" viewBox="0 0 120 80" aria-hidden="true">
+                <g style="stroke:#7cc3ca" stroke-width="2.5">
+                  <line x1="18" y1="22" x2="58" y2="10"/><line x1="18" y1="22" x2="62" y2="38"/><line x1="18" y1="58" x2="62" y2="38"/><line x1="18" y1="58" x2="56" y2="70"/>
+                  <line x1="58" y1="10" x2="98" y2="24"/><line x1="62" y1="38" x2="98" y2="24"/><line x1="62" y1="38" x2="100" y2="54"/><line x1="56" y1="70" x2="100" y2="54"/><line x1="58" y1="10" x2="62" y2="38"/>
+                </g>
+                <circle cx="18" cy="22" r="9" style="fill:var(--ink)"/><circle cx="18" cy="58" r="9" style="fill:var(--ink)"/>
+                <g style="fill:var(--teal)"><circle cx="58" cy="10" r="7"/><circle cx="62" cy="38" r="7"/><circle cx="56" cy="70" r="7"/><circle cx="98" cy="24" r="7"/><circle cx="100" cy="54" r="7"/></g>
+              </svg>
+              Gene regulatory network
+            </div>
+            <div class="arrow" aria-hidden="true">→</div>
+            <div class="node">
+              <svg width="100" height="80" viewBox="0 0 100 80" aria-hidden="true">
+                <rect x="6" y="22" width="88" height="36" rx="18" style="fill:var(--teal)"/>
+                <ellipse cx="50" cy="40" rx="13" ry="8" fill="#7cc3ca"/>
+              </svg>
+              Cardiomyocyte
+            </div>
+            <div class="arrow" aria-hidden="true">→</div>
+            <div class="node">
+              <svg width="120" height="80" viewBox="0 0 120 80" aria-hidden="true">
+                <path d="M4 66 H22 L26 12 L34 22 Q62 26 72 56 L80 66 H116" fill="none" style="stroke:var(--coral)" stroke-width="3.5" stroke-linejoin="round"/>
+              </svg>
+              Electrical identity
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow teal">Research program</span>
+          <h2>Two research areas, one loop between models and measurements</h2>
+          <p>Each area builds on eight years of developing computational and experimental methods for cardiomyocyte electrophysiology and gene regulation.</p>
+        </div>
+        <div class="grid-2">
+          <article class="card area">
+            <div class="area-tag"><b>Area 1</b> How the program is built</div>
+            <h3>Gene regulatory network control of cardiomyocyte electrical identity</h3>
+            <p class="motto">model → predict → validate</p>
+            <p>How do transcription factors build the electrical program as cardiac progenitors become beating cardiomyocytes, and as chamber identity becomes chamber function?</p>
+            <a href="research.html#area-1">Read about Area 1 →</a>
+          </article>
+          <article class="card area two">
+            <div class="area-tag"><b>Area 2</b> Why individual cells fail</div>
+            <h3>Single-cardiomyocyte determinants of electrical vulnerability</h3>
+            <p class="motto">measure → encode → constrain</p>
+            <p>Why do cardiomyocytes given the same perturbation end up with different electrical function? This includes the delayed, remodeling-driven arrhythmia risk that current proarrhythmia assays miss.</p>
+            <a href="research.html#area-2">Read about Area 2 →</a>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <h2 class="section-header">Recent highlights</h2>
-        <p class="section-subtitle">Selected milestones from my current and recent work.</p>
-        <div class="card-grid">
+        <div class="section-head">
+          <span class="eyebrow teal">Tools</span>
+          <h2>Two platforms I built</h2>
+        </div>
+        <div class="grid-2">
           <article class="card">
-            <h3>Gene regulatory networks in development</h3>
-            <p>
-              Modeling segment-specific regulatory circuits to explain how cardiomyocytes transition between chamber identities during heart tube morphogenesis.
-            </p>
+            <h3>DynaGRIN</h3>
+            <p>Perturbs gene regulatory networks inferred from scRNA-seq and scATAC-seq data <em>in silico</em> to rank the transcription factors that control a cell state. Applied to the heart field, it predicted 32 TFs that tip cells toward atrial or ventricular identity.</p>
           </article>
           <article class="card">
-            <h3>Single-cell electrophysiology</h3>
-            <p>
-              Built computational pipelines that pair automated voltage clamp with mechanistic models to understand drug-induced arrhythmia risk.
-            </p>
+            <h3>CARBONITE</h3>
+            <p>Live calcium imaging followed by immunostaining of <em>the same cells</em>, giving function and molecular identity cell by cell. It is now used for four cell types in four UVA labs. <a href="https://doi.org/10.64898/2026.02.09.704922">Preprint →</a></p>
           </article>
-          <article class="card">
-            <h3>Modeling platforms</h3>
-            <p>
-              Developed logic-based network tools and open workflows to make systems biology modeling accessible to experimental collaborators.
-            </p>
-          </article>
+        </div>
+        <div class="stats" style="margin-top:24px">
+          <div class="stat"><div class="num">7</div><div class="what">first-author papers</div><div class="sub">+ CARBONITE preprint</div></div>
+          <div class="stat"><div class="num">3</div><div class="what">individual fellowships</div><div class="sub">NIH F31 · NIH F32 · AHA</div></div>
+          <div class="stat"><div class="num">2</div><div class="what">best poster awards</div><div class="sub">GRC 2023 · Weinstein 2024</div></div>
+          <div class="stat"><div class="num">K99</div><div class="what">NHLBI, pending</div><div class="sub">Impact score 38, awaiting council</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container split">
+        <div>
+          <span class="eyebrow teal">Path</span>
+          <h2>From voltage clamp to gene regulatory networks</h2>
+          <p class="muted">Each stage of my training has been about connecting a measurement to a mechanism.</p>
+          <div class="button-row">
+            <a class="btn outline" href="cv.html">Full CV</a>
+            <a class="btn outline" href="publications.html">Publications</a>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li class="filled">
+            <div class="when">2023 – present</div>
+            <div class="what">Postdoc · UVA Biomedical Engineering</div>
+            <div class="who">Jeffrey Saucerman lab · CVRC T32 · AHA · Coulter</div>
+            <p>Built DynaGRIN and CARBONITE. Found that MEF2C, PURA, and RREB1 are required as early cardiomyocytes acquire chamber identity.</p>
+          </li>
+          <li class="filled">
+            <div class="when">2018 – 2023</div>
+            <div class="what">Ph.D. Biomedical Engineering · Cornell</div>
+            <div class="who">David Christini lab · NIH F31</div>
+            <p>Designed voltage-clamp protocols with genetic algorithms and found that quinine blocks the funny current. Showed that leak current distorts iPSC-CM action potentials even with gigaohm seals.</p>
+          </li>
+          <li>
+            <div class="when">2014 – 2018</div>
+            <div class="what">Science teacher &amp; curriculum developer</div>
+            <div class="who">Teach For America, Bronx (M.Ed.) · Codecademy</div>
+            <p>Taught 6th and 7th grade science, then led courses taken by more than 100,000 learners.</p>
+          </li>
+          <li>
+            <div class="when">2010 – 2014</div>
+            <div class="what">B.S. Biomedical Engineering · UVA</div>
+            <div class="who">Jeffrey Holmes lab · Harrison Undergraduate Research Award</div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="callout split">
+          <div>
+            <span class="label">Get in touch</span>
+            <h2>Let's talk about cardiac systems biology</h2>
+            <p>I'm happy to talk about faculty positions, seminars, and collaborations on cardiac development, arrhythmia mechanisms, single-cell phenotyping, or network modeling.</p>
+          </div>
+          <div>
+            <p><a href="mailto:apc5un@virginia.edu"><b>apc5un@virginia.edu</b></a></p>
+            <p>Department of Biomedical Engineering<br>University of Virginia, Charlottesville, VA</p>
+            <p><a href="https://github.com/apclarkva">GitHub</a> · <a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/">NCBI bibliography</a></p>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-grid">
-      <div>
-        <h3>Contact</h3>
-        <p>Email: apc5un@virginia.edu</p>
-        <p>Location: Charlottesville, VA</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Alexander P. Clark, Ph.D.</h3>
+          <p>Systems Biology Lab for Cardiac Development &amp; Electrophysiology</p>
+          <p>Department of Biomedical Engineering, University of Virginia</p>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p><a href="mailto:apc5un@virginia.edu">apc5un@virginia.edu</a></p>
+          <p>Charlottesville, VA</p>
+        </div>
+        <div>
+          <h3>Elsewhere</h3>
+          <p><a href="https://github.com/apclarkva">GitHub</a></p>
+          <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/">NCBI bibliography</a></p>
+        </div>
       </div>
-      <div>
-        <h3>Quick links</h3>
-        <p><a href="https://www.ncbi.nlm.nih.gov/myncbi/alexander.clark.1/bibliography/public/" target="_blank" rel="noreferrer">NCBI bibliography</a></p>
-        <p><a href="https://github.com/apclarkva" target="_blank" rel="noreferrer">GitHub</a></p>
-      </div>
-      <div>
-        <h3>Looking ahead</h3>
-        <p>Preparing for a faculty search in 2026. Please reach out to discuss collaborations, seminars, or opportunities.</p>
-      </div>
+      <div class="footer-bottom">Last updated October 2026</div>
     </div>
   </footer>
+  <script src="site.js?v=4"></script>
 </body>
 </html>
