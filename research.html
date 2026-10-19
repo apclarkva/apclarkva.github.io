@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <header class="site-header">
@@ -64,11 +64,11 @@
           <h3>One loop for both areas</h3>
           <p class="muted small">Computational and experimental models are matched. Model perturbations (DynaGRIN), single-cell phenotyping (CARBONITE), and genetic or drug perturbations feed each other.</p>
           <div class="loop" style="grid-template-columns:1fr">
-            <div class="step"><b>MODEL</b><span>DynaGRIN <em>in silico</em> perturbation of inferred GRNs</span></div>
+            <div class="step"><b>MODEL</b><span>GRN and action potential models</span></div>
             <div class="arr" style="transform:rotate(90deg);justify-self:center">→</div>
-            <div class="step"><b>PREDICT</b><span>Mechanistic action potential &amp; calcium models</span></div>
+            <div class="step"><b>PREDICT</b><span>DynaGRIN and AP protein changes</span></div>
             <div class="arr" style="transform:rotate(90deg);justify-self:center">→</div>
-            <div class="step"><b>TEST</b><span>Longitudinal live imaging + CARBONITE in iPSC-CMs</span></div>
+            <div class="step"><b>VALIDATE</b><span>Live imaging + CARBONITE in iPSC-CMs</span></div>
           </div>
           <p class="loop-note">↺ Data refine the network</p>
           <p class="small muted" style="margin:0">Area 1 turns model predictions into experiments. Area 2 uses single-cell measurements to constrain the models.</p>
@@ -123,7 +123,7 @@
           <div>
             <h3>DynaGRIN</h3>
             <p>
-              A general method that systematically perturbs scRNA-seq/scATAC-seq-inferred networks <em>in silico</em> to identify the transcription factors and regulons that control cell identity. Applied to heart-field GRNs, simulated knockdowns predicted <strong>32 TFs that tip atrial vs. ventricular identity</strong>: 20 atrial (e.g., <em>Nr2f2</em>, <em>Tbx5</em>) and 12 ventricular (e.g., <em>Hey2</em>, <em>Mef2c</em>).
+              A general method that systematically perturbs scRNA-seq/scATAC-seq-inferred networks <em>in silico</em> to identify the transcription factors and regulons that control cell identity. Applied to heart-field GRNs, simulated knockdowns predicted <strong>32 TFs that drive atrial vs. ventricular identity</strong>: 20 atrial (e.g., <em>Nr2f2</em>, <em>Tbx5</em>) and 12 ventricular (e.g., <em>Hey2</em>, <em>Mef2c</em>).
             </p>
           </div>
           <figure class="figure">
@@ -184,7 +184,7 @@
         </div>
 
         <div class="card" style="margin-top:28px">
-          <div class="diagram-scroll"><svg viewBox="0 0 900 170" width="100%" role="img" aria-label="Developmental timeline: cardiac progenitor with no beat, early cardiomyocyte with first beats, chamber identity at about day 20 where atrial and ventricular cells look alike, and chamber function at about day 27 where they diverge">
+          <div class="diagram-scroll"><svg viewBox="0 0 900 170" width="100%" role="img" aria-label="Developmental timeline: cardiac progenitor with no beat, early cardiomyocyte with first beats, chamber identity where atrial and ventricular cells differ molecularly, and chamber function where they differ electrically">
             <line x1="40" y1="96" x2="860" y2="96" style="stroke:var(--border)" stroke-width="4"/>
             <polygon points="860,88 876,96 860,104" style="fill:var(--border)"/>
             <!-- progenitor -->
@@ -204,14 +204,14 @@
             <rect x="500" y="72" width="44" height="22" rx="11" fill="#7cc3ca"/><text x="522" y="88" text-anchor="middle" font-size="13" font-weight="800" fill="#0d2137">A</text>
             <rect x="526" y="98" width="44" height="22" rx="11" fill="#0a5a62"/><text x="548" y="114" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">V</text>
             <text x="535" y="140" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--ink)">Chamber identity</text>
-            <text x="535" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">~day 20: A, V alike</text>
+            <text x="535" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">molecular A ≠ V</text>
             <!-- chamber function -->
             <path d="M705 54 h6 l4 -36 l10 30 l2 6 h6 l4 -36 l10 30 l2 6 h8" fill="none" stroke="#7cc3ca" stroke-width="3"/>
             <path d="M705 54 h6 l4 -36 q10 4 18 36 h6 l4 -36 q10 4 18 36 h6" fill="none" stroke="#0a5a62" stroke-width="3"/>
             <rect x="710" y="72" width="44" height="22" rx="11" fill="#7cc3ca"/><text x="732" y="88" text-anchor="middle" font-size="13" font-weight="800" fill="#0d2137">A</text>
             <rect x="736" y="98" width="44" height="22" rx="11" fill="#0a5a62"/><text x="758" y="114" text-anchor="middle" font-size="13" font-weight="800" fill="#fff">V</text>
             <text x="745" y="140" text-anchor="middle" font-size="15" font-weight="700" style="fill:var(--ink)">Chamber function</text>
-            <text x="745" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">~day 27: A, V diverge</text>
+            <text x="745" y="160" text-anchor="middle" font-size="13" style="fill:var(--muted)">electrical A ≠ V</text>
           </svg></div>
           <div class="grid-2 small muted" style="margin-top:8px">
             <div><span class="pill">1a</span> &nbsp;progenitor → beating cardiomyocyte</div>
@@ -235,16 +235,25 @@
               </p>
             </div>
             <figure class="figure">
-              <div class="fig-grid-2">
-                <div></div><div class="lbl">Control</div><div class="lbl kd">MEF2C KD</div>
+              <div class="fig-grid-kd">
+                <div></div><div class="lbl">Control</div><div class="lbl kd">MEF2C sh</div><div class="lbl kd">PURA sh</div><div class="lbl kd">RREB1 sh</div>
                 <div class="lbl">ANP</div>
-                <img src="assets/img/research/mef2c-ctrl-anp.jpg" alt="ANP immunostaining, control" loading="lazy">
-                <img src="assets/img/research/mef2c-kd-anp.jpg" alt="ANP immunostaining, MEF2C knockdown, reduced signal" loading="lazy">
+                <img src="assets/img/research/kd-anp-ctrl.jpg" alt="ANP immunostaining, control" loading="lazy">
+                <img src="assets/img/research/kd-anp-mef2c.jpg" alt="ANP immunostaining after MEF2C knockdown" loading="lazy">
+                <img src="assets/img/research/kd-anp-pura.jpg" alt="ANP immunostaining after PURA knockdown" loading="lazy">
+                <img src="assets/img/research/kd-anp-rreb1.jpg" alt="ANP immunostaining after RREB1 knockdown" loading="lazy">
                 <div class="lbl">MYL2</div>
-                <img src="assets/img/research/mef2c-ctrl-myl2.jpg" alt="MYL2 immunostaining, control" loading="lazy">
-                <img src="assets/img/research/mef2c-kd-myl2.jpg" alt="MYL2 immunostaining, MEF2C knockdown, reduced signal" loading="lazy">
+                <img src="assets/img/research/kd-myl2-ctrl.jpg" alt="MYL2 immunostaining, control" loading="lazy">
+                <img src="assets/img/research/kd-myl2-mef2c.jpg" alt="MYL2 immunostaining after MEF2C knockdown" loading="lazy">
+                <img src="assets/img/research/kd-myl2-pura.jpg" alt="MYL2 immunostaining after PURA knockdown" loading="lazy">
+                <img src="assets/img/research/kd-myl2-rreb1.jpg" alt="MYL2 immunostaining after RREB1 knockdown" loading="lazy">
+                <div class="lbl">Ca²⁺</div>
+                <img class="trace" src="assets/img/research/kd-ca-ctrl.png" alt="Calcium transients, control" loading="lazy">
+                <img class="trace" src="assets/img/research/kd-ca-mef2c.png" alt="Calcium transients after MEF2C knockdown" loading="lazy">
+                <img class="trace" src="assets/img/research/kd-ca-pura.png" alt="Calcium transients after PURA knockdown" loading="lazy">
+                <img class="trace" src="assets/img/research/kd-ca-rreb1.png" alt="Calcium transients after RREB1 knockdown" loading="lazy">
               </div>
-              <figcaption><b>Postdoc data.</b> Knocking down MEF2C at day 13 depletes the atrial (ANP) and ventricular (MYL2) chamber markers a week later. PURA and RREB1 knockdowns do the same.</figcaption>
+              <figcaption><b>Postdoc data.</b> shRNA knockdown of MEF2C, PURA, or RREB1 at day 13 reduces the chamber markers ANP and MYL2 and alters calcium transients a week later.</figcaption>
             </figure>
           </div>
         </div>
@@ -272,11 +281,11 @@
         </div>
 
         <div class="loop">
-          <div class="step"><b>MODEL</b><span>DynaGRIN in silico perturbation</span></div>
+          <div class="step"><b>MODEL</b><span>GRN and AP models</span></div>
           <div class="arr">→</div>
-          <div class="step"><b>PREDICT</b><span>Action potential models</span></div>
+          <div class="step"><b>PREDICT</b><span>DynaGRIN and AP protein changes</span></div>
           <div class="arr">→</div>
-          <div class="step"><b>TEST</b><span>Live imaging + CARBONITE</span></div>
+          <div class="step"><b>VALIDATE</b><span>Live imaging + CARBONITE</span></div>
         </div>
         <p class="outcome" style="margin-top:20px"><b>Outcome:</b> the dosage-sensitive regulators through which congenital heart disease mutations could create an arrhythmic substrate before, or independent of, malformation.</p>
       </div>
@@ -434,6 +443,6 @@
       <div class="footer-bottom">Last updated October 2026</div>
     </div>
   </footer>
-  <script src="site.js?v=6"></script>
+  <script src="site.js?v=8"></script>
 </body>
 </html>

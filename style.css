@@ -390,3 +390,11 @@ footer a:hover { color: #efa394; }
 /* Wide diagrams scroll sideways on phones instead of shrinking to illegible */
 .diagram-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 .diagram-scroll > svg { min-width: 640px; }
+
+/* 1a knockdown panel: row label + four conditions */
+.fig-grid-kd { display: grid; grid-template-columns: auto repeat(4, minmax(0, 1fr)); gap: 4px; align-items: center; }
+.fig-grid-kd .lbl { font-size: 0.74rem; font-weight: 700; color: #5b6b7c; text-align: center; }
+.fig-grid-kd .lbl.kd { color: var(--coral); }
+.fig-grid-kd img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+.fig-grid-kd img.trace { aspect-ratio: 129 / 68; object-fit: contain; background: #fff; }
+.stats.pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }

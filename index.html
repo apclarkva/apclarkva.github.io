@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=8">
 </head>
 <body>
   <header class="site-header">
@@ -67,7 +67,7 @@
           </p>
         </div>
         <div class="card">
-          <div class="pipeline" aria-label="Gene regulatory network to cardiomyocyte to electrical identity">
+          <div class="pipeline" aria-label="Gene regulatory network to molecular identity to electrical identity">
             <div class="node">
               <svg width="120" height="80" viewBox="0 0 120 80" aria-hidden="true">
                 <g style="stroke:#7cc3ca" stroke-width="2.5">
@@ -85,7 +85,7 @@
                 <rect x="6" y="22" width="88" height="36" rx="18" style="fill:var(--teal)"/>
                 <ellipse cx="50" cy="40" rx="13" ry="8" fill="#7cc3ca"/>
               </svg>
-              Cardiomyocyte
+              Molecular identity
             </div>
             <div class="arrow" aria-hidden="true">→</div>
             <div class="node">
@@ -134,18 +134,16 @@
         <div class="grid-2">
           <article class="card">
             <h3>DynaGRIN</h3>
-            <p>Perturbs gene regulatory networks inferred from scRNA-seq and scATAC-seq data <em>in silico</em> to rank the transcription factors that control a cell state. Applied to the heart field, it predicted 32 TFs that tip cells toward atrial or ventricular identity.</p>
+            <p>Uses gene regulatory networks inferred from scRNA-seq and scATAC-seq data and perturbs them <em>in silico</em> to rank the transcription factors that control cell state. Applied to the heart field, it predicted 32 TFs that drive atrial vs. ventricular identity.</p>
           </article>
           <article class="card">
             <h3>CARBONITE</h3>
-            <p>Live calcium imaging followed by immunostaining of <em>the same cells</em>, giving function and molecular identity cell by cell. It is now used for four cell types in four UVA labs. <a href="https://doi.org/10.64898/2026.02.09.704922">Preprint →</a></p>
+            <p>Live calcium imaging followed by immunostaining of <em>the same cells</em>, giving function and molecular identity cell by cell. Works across cardiomyocytes, neural cells, lymphatic endothelial cells, and differentiating mesoderm. <a href="https://doi.org/10.64898/2026.02.09.704922">Preprint →</a></p>
           </article>
         </div>
-        <div class="stats" style="margin-top:24px">
+        <div class="stats pair" style="margin-top:24px">
           <div class="stat"><div class="num">7</div><div class="what">first-author papers</div><div class="sub">+ CARBONITE preprint</div></div>
           <div class="stat"><div class="num">3</div><div class="what">individual fellowships</div><div class="sub">NIH F31 · NIH F32 · AHA</div></div>
-          <div class="stat"><div class="num">2</div><div class="what">best poster awards</div><div class="sub">GRC 2023 · Weinstein 2024</div></div>
-          <div class="stat"><div class="num">K99</div><div class="what">NHLBI, pending</div><div class="sub">Impact score 38, awaiting council</div></div>
         </div>
       </div>
     </section>
@@ -165,7 +163,7 @@
           <li class="filled">
             <div class="when">2023 – present</div>
             <div class="what">Postdoc · UVA Biomedical Engineering</div>
-            <div class="who">Jeffrey Saucerman lab · CVRC T32 · AHA · Coulter</div>
+            <div class="who">Jeffrey Saucerman lab · CVRC T32 · AHA Fellowship · Coulter Grant</div>
             <p>Built DynaGRIN and CARBONITE. Found that MEF2C, PURA, and RREB1 are required as early cardiomyocytes acquire chamber identity.</p>
           </li>
           <li class="filled">
@@ -229,6 +227,6 @@
       <div class="footer-bottom">Last updated October 2026</div>
     </div>
   </footer>
-  <script src="site.js?v=6"></script>
+  <script src="site.js?v=8"></script>
 </body>
 </html>
